@@ -1,0 +1,13 @@
+System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
+	     
+		WebDriver driver= new ChromeDriver();
+    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		 WebDriverWait wait= new WebDriverWait(driver,Duration.ofSeconds(10));
+		 driver.get("https://demo.actitime.com/login.do");
+		 JavascriptExecutor jse= (JavascriptExecutor) driver;
+		 
+		Object obj = jse.executeScript("return document.location.href");
+		
+		String url = (String) obj;
+		
+		System.out.println("The current url is"+ url);
