@@ -8,5 +8,5 @@ System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
 		 
 		Object obj = jse.executeScript("return document.location.href");
 		
-		String url = (String) obj;
+
 	
